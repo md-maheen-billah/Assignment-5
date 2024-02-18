@@ -10,6 +10,13 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .disable-button{ 
+  pointer-events: none; 
+  background-color: #1DD100;
+  color: white;
+}
+    </style>
   </head>
   <body class="max-w-[1440px] mx-auto">
     <header>
@@ -174,7 +181,7 @@
                   class="btn bg-[#1dd1001a] text-[#1DD100] text-[1.125rem] lg:text-[1.25rem] font-medium"
                 >
                   <img src="images/seat-green.png" alt="" />
-                  <span>40</span> Seats left
+                  <span id="seats-left">40</span> Seats left
                 </button>
               </div>
               <div class="rounded-3xl bg-[#F7F8F8] p-[32px] mt-6">
@@ -545,10 +552,10 @@
                   <div class="flex justify-center ">
                     <li class="flex justify-between w-full font-medium"><p>Total Price</p><p>BDT <span id="total-cost">0</span></p></li>
                   </div>
-                  <div class="mt-4 rounded-lg bg-white flex p-2"><input class="input input-ghost w-full bg-white" type="text" placeholder="Have any coupon?">
-                  <button class="btn text-white bg-[#1DD100]">Apply</button></div>
+                  <div id="gayeb" class="mt-4 rounded-lg bg-white flex p-2"><input id="input-f" class="input input-ghost w-full bg-white" type="text" placeholder="Have any coupon?">
+                  <button id="discount-btn" class="btn text-white bg-[#1DD100]" disabled>Apply</button></div>
                   <div class="flex justify-center mt-6">
-                    <li class="flex justify-between w-full font-medium"><p>Grand Total</p><p>BDT <span>0</span></p></li>
+                    <li class="flex justify-between w-full font-medium"><p>Grand Total</p><p>BDT <span id="grand-total">0</span></p></li>
                   </div>
                 </div>
             </div>
