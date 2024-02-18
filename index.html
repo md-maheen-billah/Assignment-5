@@ -558,6 +558,29 @@
                     <li class="flex justify-between w-full font-medium"><p>Grand Total</p><p>BDT <span id="grand-total">0</span></p></li>
                   </div>
                 </div>
+                <div class="mt-6">
+                  <h2 class="font-semibold">Passenger Name*</h2>
+                  <input class="input input-ghost w-full bg-white border-[1px] border-[#0307121A] py-7 mt-4" type="text" placeholder="Enter your name">
+                  <h2 class="mt-6 font-semibold">Phone Number*</h2>
+                  <input id="number-phone" class="input input-ghost w-full bg-white border-[1px] border-[#0307121A] py-7 mt-4" type="number" placeholder="Enter your phone number">
+                  <h2 class="mt-6 font-semibold">Email ID</h2>
+                  <input class="input input-ghost w-full bg-white border-[1px] border-[#0307121A] py-7 mt-4" type="text" placeholder="Enter your email id">
+                  <div>       <!-- Open the modal using ID.showModal() method -->
+                    <button id="modal-btn" class="btn mt-6 w-full bg-[#1DD100] text-white" onclick="my_modal_5.showModal()" disabled>Next</button>
+                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                      <div class="modal-box">
+                        <h3 class="font-bold text-lg">Hello!</h3>
+                        <p class="py-4">Press ESC key or click the button below to close</p>
+                        <div class="modal-action">
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>           
+                  </div>
+                </div>
             </div>
           </div>
         </div>

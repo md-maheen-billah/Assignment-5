@@ -30,6 +30,8 @@ for (const ticketBtn of allTicketBtn) {
       e.target.classList.add("text-white");
       e.target.classList.add("bg-[#1DD100]");
       e.target.classList.add("pointer-events-none");
+    } else {
+      alert("Cannot book more than 4 seats");
     }
 
     setElementValueById("cart-count", count);
@@ -42,6 +44,18 @@ for (const ticketBtn of allTicketBtn) {
     } else {
       document.getElementById("discount-btn").setAttribute("disabled", true);
     }
+
+    document
+      .getElementById("number-phone")
+      .addEventListener("keyup", function (event) {
+        const text = event.target.value.toString().length;
+        const button = document.getElementById("modal-btn");
+        if (text > 0 && seat > 0) {
+          button.removeAttribute("disabled");
+        } else {
+          button.setAttribute("disabled", true);
+        }
+      });
   });
 }
 
