@@ -31,7 +31,7 @@ for (const ticketBtn of allTicketBtn) {
       e.target.classList.add("bg-[#1DD100]");
       e.target.classList.add("pointer-events-none");
     } else {
-      alert("Cannot book more than 4 seats");
+      alert("Cannot Book More Than 4 Seats");
     }
 
     setElementValueById("cart-count", count);
