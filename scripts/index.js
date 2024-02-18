@@ -73,15 +73,19 @@ btn2.addEventListener("click", function () {
     const convertedTotalCost = parseInt(grandTotal);
     const discount = convertedTotalCost * 0.15;
     const newGrandTotal = convertedTotalCost - discount;
+    document.getElementById("discount").innerText = discount;
     setElementValueById("grand-total", newGrandTotal);
     document.getElementById("gayeb").className = "hidden";
+    document.getElementById("discon").classList.remove("hidden");
   } else if (couponElement === "Couple 20") {
     const grandTotal = document.getElementById("total-cost").innerText;
     const convertedTotalCost = parseInt(grandTotal);
     const discount = convertedTotalCost * 0.2;
     const newGrandTotal = convertedTotalCost - discount;
+    document.getElementById("discount").innerText = discount;
     setElementValueById("grand-total", newGrandTotal);
     document.getElementById("gayeb").className = "hidden";
+    document.getElementById("discon").classList.remove("hidden");
   } else {
     alert("Invalid Coupon");
   }
